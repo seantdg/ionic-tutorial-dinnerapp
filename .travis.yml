@@ -8,5 +8,5 @@ before_script:
   - bower install
   - npm install -g protractor@2
   - webdriver-manager update
-  - node run deploy &
+  - npm run deploy &
   - sleep 2 # give it some time to start
