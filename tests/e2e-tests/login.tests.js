@@ -9,14 +9,14 @@ describe('Clicking on the login button ', function(){
 	});
 	
 	it('should validate the credentials for a successful login and display the My Dinners view', function() {
-		username.sendKeys('gonehybrid');
+		username.sendKeys('seantdg');
 		password.sendKeys('password');
 		
 		loginButton.click().then(function() {
 			expect(browser.getLocationAbsUrl()).toMatch('/my-dinners');
 			
 			var dinners = element.all(by.repeater('dinner in vm.dinners'));
-			expect(dinners.count()).toEqual(3);
+			expect(dinners.count()).toEqual(1);
 		});
 	});
 		
